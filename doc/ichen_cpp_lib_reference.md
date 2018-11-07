@@ -1,7 +1,7 @@
 iChen® 4.0 C++ Integration Library API Reference
 ================================================
 
-Copyright &copy; Chen Hsong Holdings Ltd.  All rights reserved.  
+Copyright © Chen Hsong Holdings Ltd.  All rights reserved.  
 Document Version: 4.0  
 Last Edited: 2017-05-22
 
@@ -755,8 +755,8 @@ bool SendJobMode(UINT32 newJobMode, UINT32 oldJobMode);
 
 ### Job Modes
 
-Job mode numbers for this library are *different* from those in OpenProtocol&trade; (see [this document](https://github.com/chenhsong/OpenProtocol/blob/master/doc/enums.md#JobModes)).
-**DO NOT USE** the job mode numbers in OpenProtocol&trade;; use the job modes numbers below instead:
+Job mode numbers for this library are *different* from those in OpenProtocol™ (see [this document](https://github.com/chenhsong/OpenProtocol/blob/master/doc/enums.md#JobModes)).
+**DO NOT USE** the job mode numbers in OpenProtocol™, use the job modes numbers below instead:
 
 |Job Mode         |Number       |
 |-----------------|:-----------:|
