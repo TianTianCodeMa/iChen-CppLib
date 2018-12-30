@@ -3,7 +3,7 @@ iChen® 4.0 C++ Integration Library API Reference
 
 Copyright © Chen Hsong Holdings Ltd.  All rights reserved.  
 Document Version: 4.0  
-Last Edited: 2017-05-22
+Last Edited: 2018-12-30
 
 
 Usage Instructions
@@ -138,6 +138,29 @@ pIChen->SendAlarmTriggered(123);
 
 
 
+Controller Types
+----------------
+
+|Code|Numeric Value|Description|
+|----|:-----------:|-----------|
+|`Unknown`|99|Unknown|
+|`Ai01`|1|Ai-01 _(deprecated)_|
+|`Ai02`|6|Ai-02|
+|`Ai11`|2|Ai-11 _(deprecated)_|
+|`Ai12`|7|Ai-12|
+|`CPC6`|8|CPC-6.0|
+|`MPC6`|9|MPC-6.0|
+|`CDC2000`|98|CDC2000 _(deprecated)_|
+|`CDC2000WIN`|3|CDC2000WIN|
+|`CDC3000`|4|CDC3000 _(deprecated)_|
+|`SPS3300`|0|R3000/SPS3300 _(deprecated)_|
+|`NewAge`|5|Beckhoff New-Age _(deprecated)_|
+|`CBmold300`|10|Beckhoff CBmold<sup>300</sup>|
+|`CBmold800`|11|Beckhoff CBmold<sup>800</sup>|
+|`MPC7`|12|MPC-7|
+
+
+
 CiChenLibraryInterface
 ----------------------
 
@@ -170,7 +193,7 @@ class CiChenLibraryInterface
 
 |Parameters                |Description                     |
 |--------------------------|--------------------------------|
-|`controllerType`          |Type of controller (see [this document](https://github.com/chenhsong/OpenProtocol/blob/master/doc/enums.md#ControllerTypes) for a full list)|
+|`controllerType`          |Type of controller (see [here](#controller-types) for a full list)|
 |`languageIndex`           |Interface language (see [this document](https://github.com/chenhsong/OpenProtocol/blob/master/doc/enums.md#Languages) for a full list)|
 |`clientVersionMajor`,<br />`clientVersionMinor`|Version of the communications protocol (default 1.0)|
 |`machineSerialNumber`     |Unique serial number of the machine|
@@ -184,7 +207,7 @@ All method calls on this class are thread-safe.
 
 ### Remarks
 
-For a controller not specified in the official list (see [this document](https://github.com/chenhsong/OpenProtocol/blob/master/doc/enums.md#ControllerTypes)),
+For a controller not specified in the official list (see [here](#controller-types)),
 use any number starting from 100 as the `controllerType`.  Controller types 0-99 are reserved.
 
 ### Example
@@ -306,7 +329,7 @@ CiChenLibraryInterface::SetControllerType
 ### Usage
 
 Sets the type of controller
-(see [this document](https://github.com/chenhsong/OpenProtocol/blob/master/doc/enums.md#ControllerTypes) for a full list).
+(see [here](#controller-types) for a full list).
 
 ### Syntax
 
@@ -318,7 +341,7 @@ bool SetControllerType(UINT8 controllerType);
 
 |Parameter                 |Description                     |
 |--------------------------|--------------------------------|
-|`controllerType`          |Type of controller (see (see [this document](https://github.com/chenhsong/OpenProtocol/blob/master/doc/enums.md#ControllerTypes) for a full list)|
+|`controllerType`          |Type of controller (see [here](#controller-types) for a full list)|
 
 ### Return Value
 
@@ -326,7 +349,7 @@ TRUE if successful, otherwise FALSE.
 
 ### Remarks
 
-For a controller not specified in the official list (see [this document](https://github.com/chenhsong/OpenProtocol/blob/master/doc/enums.md#ControllerTypes)),
+For a controller not specified in the official list (see [here](#controller-types)),
 use any number starting from 100.  Controller types 0-99 are reserved.
 
 This method cannot be called when already connected to an iChen® 4.0 Server.
